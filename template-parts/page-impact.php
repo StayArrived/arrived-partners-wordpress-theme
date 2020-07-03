@@ -15,7 +15,7 @@ get_header();
 
 		<div class="splash-container">
 			<div class="wp-block-image splash-video-container">
-				<img src="https://github.com/parkernilson/ArrivedPartners.com/blob/master/group-of-women.jpg?raw=true"></img>
+				<img src="https://github.com/stayarrived/arrived-partners-assets/blob/master/group-of-women.jpg?raw=true"></img>
 			</div>
 			<div class="splash-text-container">
 				<h2 class="splash-text">HOME FOR A HOME</h2>

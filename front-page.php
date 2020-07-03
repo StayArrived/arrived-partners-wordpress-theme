@@ -13,7 +13,7 @@ get_header();
 
 		<div class="splash-container">
 			<div class="wp-block-video splash-video-container">
-				<video autoplay loop muted poster="https://github.com/parkernilson/ArrivedPartners.com/blob/master/website-lifestyle-video.jpeg?raw=true" src="https://github.com/parkernilson/ArrivedPartners.com/blob/master/website-lifestyle-video.mp4?raw=true"></video>
+				<video autoplay loop muted poster="https://github.com/stayarrived/arrived-partners-assets/blob/master/website-lifestyle-video.jpeg?raw=true" src="https://github.com/arrived-partners-assets/blob/master/website-lifestyle-video.mp4?raw=true"></video>
 			</div>
 			<div class="splash-text-container">
 				<h2 class="splash-text">YOU HAVE ARRIVED.</h2>
