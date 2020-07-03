@@ -1,0 +1,422 @@
+@use "../variables-site/structure";
+@use "../variables-site/responsive";
+
+//TODO: organize these css classes a little better.
+
+// html {
+//     @media screen and (max-width: $break__small) {
+//         font-size: 3vw;
+//     }
+// }
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 32px;
+}
+
+.site-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4vw;
+    margin: 0;
+}
+
+[class^="wp-block-"] {
+    margin-bottom: 60px;
+}
+
+.wp-block-column,
+.wp-block-media-text__content {
+    margin-bottom: 0;
+}
+
+.wp-block-image {
+    margin-bottom: 0;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    width: 8vw;
+    height: 8vw;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sidebar-menu {
+    background: $color__white;
+    position: fixed;
+    padding: 0 $size__site-side-padding;
+    height: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    transform: translate(-150%, 0px);
+    transition: all 0.75s ease-in-out;
+
+    &.toggled {
+        -webkit-transform: translate(0%, 0px);
+        transform: translate(0%, 0px);
+        transition: all 0.75s ease-in-out;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+        a, p, h1, h2, h3, h4, h5, h6 {
+            color: $color__text-main;
+        }
+    }
+
+    .menu-main-nav-container {
+        margin: 0;
+    }
+}
+
+.menu-toggle {
+	width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath fill='white' d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/%3E%3C/svg%3E");
+    z-index: 1000;
+}
+
+.site-header.menu-main-nav-container {
+    @media screen and (max-width: $break__small) {
+        display: none;
+    }
+}
+
+.main-navigation-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+ul.menu {
+    li {
+        margin: 24px;
+
+        @media screen and (max-width: $break__medium) {
+            margin: 8px;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width: $break__small) {
+        }
+    }
+}
+
+.inquiry-form {
+    max-width: 800px;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $size__site-side-padding;
+    padding-left: $size__site-side-padding;
+
+    @media screen and (max-width: $break__small) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.form-flex-row {
+    display: flex;
+    margin: 0;
+
+    .wpcf7-form-control-wrap {
+        flex-grow: 1;
+    }
+}
+
+.form-section-1 {
+    margin-bottom: 24px;
+
+    input {
+        width: 100%;
+    }
+}
+
+.wpcf7-form-control-wrap input::before {
+    content: "Yr Build";
+    margin-right: 10px;
+}
+
+.form-section-2 {
+    display: flex;
+    margin-bottom: 24px;
+
+    input {
+        width: 100%;
+    }
+
+    .option-1 {
+        flex-basis: 3;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+    }
+
+    .separator {
+        flex-basis: 1;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 24px;
+        padding-right: 24px;
+
+        .or {
+            text-align: center;
+        }
+    }
+
+    .option-2 {
+        flex-grow: 1;
+        flex-basis: 50%;
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+
+        input {
+            width: 100%;
+        }
+        
+        br {
+            display: none;
+        }
+
+        @media screen and (max-width: $break__large) {
+            grid-template-columns: auto;
+        }
+
+        // @media screen and (max-width: $break__small) {
+        //     grid-template-columns: 50% 50%;
+        // }
+    }
+    
+    @media screen and (max-width: $break__small) {
+        flex-direction: column;
+    }
+
+}
+
+.submit-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.site-header {
+    background-color: black;
+    padding-left: $size__site-side-padding;
+    padding-right: $size__site-side-padding;
+
+    @media screen and (max-width: $break__small) {
+        padding-left: $size__site-side-padding-small;
+        padding-right: $size__site-side-padding-small;
+    }
+
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+
+    a {
+        color: $color__white;
+        text-decoration: none;
+    }
+}
+
+.home, .page-template-page-impact {
+    .site-header {
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+    }
+}
+
+.front-page {
+    .entry-header { 
+        display: none;
+    }
+
+    .splash-container {
+        position: relative;
+        height: 0;
+        padding-top: 50%;
+        overflow: hidden;
+
+        .splash-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -100;
+            margin: 0;
+        }
+
+        .splash-text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .splash-text {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                font-family: "Montserrat", sans-serif;
+                color: white;
+            }
+        }
+
+        .splash-tooltip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-top: 0;
+            margin-bottom: 12px;
+            opacity: 30%;
+            margin-left: $size__site-side-padding;
+            color: white;
+            @media screen and (max-width: $break__small) {
+                display: none;
+            }
+        }
+
+    }
+
+    .wp-block-media-text {
+        .wp-block-media-text__media {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
+
+article {
+    padding-left: $size__site-side-padding;
+    padding-right: $size__site-side-padding;
+
+    @media screen and (max-width: $break__small) {
+        padding-left: $size__site-side-padding-small;
+        padding-right: $size__site-side-padding-small;
+    }
+}
+
+.entry-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+.content-area {
+    margin-bottom: 0px;
+}
+
+body.page {
+    margin: 0;
+}
+
+.home {
+    article.page {
+        // background-image: url("https://github.com/parkernilson/ArrivedPartners.com/blob/master/Red%20Rocks%20v2.0.png?raw=true");
+        // background-position: bottom;
+        // background-repeat: no-repeat;
+        // background-size: contain;
+
+        margin-bottom: 0px;
+    }
+}
+
+.site-content {
+    margin-bottom: 0px;
+}
+
+#page.site {
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer {
+    background-color: black;
+    height: 400px;
+    padding: $size__site-side-padding;
+    @media screen and (max-width: $break__small) {
+        padding: $size__site-side-padding-small;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color__link;
+
+        &:hover {
+            color: $color__link-hover;
+        }
+
+        &:visited {
+            color: $color__link-visited;
+        }
+    }
+}
+
+html {
+    margin: 0;
+}
+
+.site-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    [class^="col"] {
+        width: 100%;
+    }
+}
+
+
+.col1 {
+    width: 50%;
+    grid-column: 1 / 2;
+
+    @media screen and (max-width: $break__small) {
+        display: none;
+    }
+}
+
+.col2 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3 / 3;
+
+    @media screen and (max-width: $break__small) {
+        grid-column: 1 / 2;
+    }
+}
+
+.col3 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    grid-column: 4 / 4;
+
+    @media screen and (max-width: $break__small) {
+        grid-column: 3 / 4;
+    }
+}
+
+.dark-text {
+    color: black;
+}

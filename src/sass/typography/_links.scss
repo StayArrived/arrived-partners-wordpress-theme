@@ -1,0 +1,13 @@
+@use "../variables-site/colors";
+
+a {
+    color: $color__link;
+
+    &:hover {
+        color: $color__link-hover;
+    }
+
+    &:visited {
+        color: $color__link-visited;
+    }
+}

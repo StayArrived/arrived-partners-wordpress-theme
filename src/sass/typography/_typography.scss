@@ -1,0 +1,28 @@
+//TODO: figure out how to get the actual font files to work
+//TODO: Change the domain of all of these fonts to the ArrivedPartners github.
+// @font-face {
+// 	font-family: "Basis Grotesque Pro";
+// 	font-weight: normal;
+// 	src: url('https://github.com/parkernilson/ArrivedPartners.com/blob/master/fonts/Basis_Grotesque_Pro/BasisGrotesquePro-Regular.ttf?raw=true');
+// }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap'); 
+@import "../variables-site/responsive";
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	// font-family: $font__main;
+	font-family: "Roboto", sans-serif;
+	line-height: $font__line-height-body;
+
+	@include font-size(1);
+}
+
+@import "headings";
+@import "copy";
+
+@import "links";
