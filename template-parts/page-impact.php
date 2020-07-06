@@ -15,9 +15,7 @@ get_header();
 
 		<div class="splash-container">
 			<div class="wp-block-image splash-video-container">
-				<video autoplay loop muted>
-					<img src="/static/group-of-women.jpg" />
-				</video>
+				<img src="/static/group-of-women.jpg" />
 			</div>
 			<div class="splash-text-container">
 				<h2 class="splash-text">HOME FOR A HOME</h2>
