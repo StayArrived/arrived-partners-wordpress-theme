@@ -14,8 +14,8 @@ get_header();
 		<div class="splash-container">
 			<div class="wp-block-video splash-video-container">
 				<video autoplay loop muted>
-					<source src="static/website-lifestyle-video.mp4" />
-					<img src="static/website-lifestyle-video-still.jpg" />
+					<source src="/static/website-lifestyle-video.mp4" />
+					<img src="/static/website-lifestyle-video-still.jpg" />
 				</video>
 			</div>
 			<div class="splash-text-container">
