@@ -22,9 +22,9 @@
 			</div>
 			<div class="col2">
 				<h3>Company</h3>
-				<a href=""><p>FAQ</p></a>
-				<a href=""><p>Two Beta</p></a>
-				<a href=""><p>Privacy</p></a>
+				<a href="/faq"><p>FAQ</p></a>
+				<a href="https://twobeta.org"><p>Two Beta</p></a>
+				<a href="/privacy"><p>Privacy</p></a>
 			</div>
 			<div class="col3">
 				<h3>Get in touch</h3>
