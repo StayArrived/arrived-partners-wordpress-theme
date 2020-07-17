@@ -63,8 +63,9 @@ textarea {
 }
 
 .wpcf7-response-output {
-	border: none;
-	background-color: #fffedb;
+	border: none !important;
+	background-color: #f5fcff;
+	// #fffedb
 }
 
 // $primary: #11998e;
