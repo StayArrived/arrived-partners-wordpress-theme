@@ -28,8 +28,12 @@
 			</div>
 			<div class="col3">
 				<h3>Get in touch</h3>
-				<p>(480) 624 - 5200</p>
+				<p>801.560.8069</p>
 				<p>hello@arrivedpartners.com</p>
+				<div class="flex-row-container">
+					<svg class="arrivedpartners-inline-icon instagram" style="margin-right:8px;"></svg>
+					<p>@stayarrived</p>
+				</div>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

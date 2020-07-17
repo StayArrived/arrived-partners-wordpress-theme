@@ -351,6 +351,7 @@ body.page {
 }
 
 .site-footer {
+    color: $color__text-dark-contrast;
     background-color: black;
     height: 400px;
     padding: $size__site-side-padding;
@@ -364,10 +365,6 @@ body.page {
 
         &:hover {
             color: $color__link-hover;
-        }
-
-        &:visited {
-            color: $color__link-visited;
         }
     }
 }
