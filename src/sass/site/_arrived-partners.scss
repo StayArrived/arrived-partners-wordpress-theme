@@ -19,10 +19,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-//set a margin to the bottom of any wp block except for nested blocks like wp-block-button__link
-[class^="wp-block-[^(__)]"] {
-    margin-bottom: 60px;
-}
+// [class^="wp-block-"] {
+//     margin-bottom: 60px;
+// }
 
 .wp-block-column,
 .wp-block-media-text__content {
