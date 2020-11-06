@@ -29,10 +29,16 @@ NOTE from Parker (11/6/2020): I was not very familiar with wordpress when I crea
 ```
 $ git pull
 ```
+To pull the changes from github onto the server.
+5. enter command:
+```
+$ npm install && npm run build
+```
+to ensure that all npm dependencies are installed, then build the project on the server.
 
 Then, the changes should show up on the site.
 
-**NOTE:** don't forget to compile the SASS files if you made any changes to those!
+**NOTE:** don't forget to compile the source code if you made any changes in the `src/` directory.
 
 #### Note about SCSS
 This project uses scss for styling.
