@@ -11,6 +11,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main front-page">
 
+		<!-- The splash container which holds the front page video -->
 		<div class="splash-container">
 			<div class="wp-block-video splash-video-container">
 				<video autoplay loop muted>
