@@ -9,6 +9,9 @@ As of 11/6/2020, the ArrivedPartners.com website is hosted on an AWS Lightsail W
 #### Static Files
 Static files are served by the lightsail instance from the `/home/bitnami/apps/wordpress/htdocs/static` directory.
 
+### Based on _S Wordpress Theme Template
+This project is built on top of the [_S (underscores)](https://underscores.me/) wordpress theme template.
+
 ### Development Workflow
 The styling of this site is defined in the `arrived-partners-wordpress-theme`.
 
@@ -23,3 +26,23 @@ $ git pull
 ```
 
 Then, the changes should show up on the site.
+
+**NOTE:** don't forget to compile the SASS files if you made any changes to those!
+
+#### Note about SCSS
+This project uses scss for styling.
+
+As of 11/6/2020, all styling which is specific to the arrived partners theme is defined inside of the `src/sass/site/_arrived-partners.scss` file. I realize this could be better organized, but this website was created in a bit of a rush 😅.
+
+**NOTE:** In order for changes in the sass files to show up in the actual styles, you must run
+```
+$ npm run build
+```
+which will compile the sass into the `styles.css` file.
+
+#### Note about Webpack
+If anything in `src/` is modified, it will need to be compiled by webpack, using
+```
+$ npm run build
+```
+before it will show up in the code that gets run.
