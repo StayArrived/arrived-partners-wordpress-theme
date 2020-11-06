@@ -15,12 +15,17 @@ This project is built on top of the [_S (underscores)](https://underscores.me/) 
 ### Development Workflow
 The styling of this site is defined in the `arrived-partners-wordpress-theme`.
 
-When you would like to modify content of the site, first check to see if it is editable in the wordpress editor. The pages of this site are set up as wordpress pages, however some of the more advanced components of the site had to be written in PHP. If you must edit the code of the site:
-1. Clone this repository
-2. Make changes, then push
-3. SSH into the Lightsail Instance (this can be done with any ssh client, but aws offers a browser-based one that works great)
-4. navigate to the `/home/bitnami/apps/wordpress/htdocs/wp-content/themes/arrived-partners-wordpress-theme` directory
-5. enter command:
+When you would like to modify content of the site, first check to see if it is editable in the wordpress editor. The pages of this site are set up as wordpress pages, however some of the more advanced components of the site had to be written in PHP (inside this wordpress theme).
+
+#### Local development:
+To develop this project locally, you must set up a local apache server on your computer and install wordpress. Then clone this wordpress theme into the `wp-content/themes` directory of your wordpress installation. Set this theme as the active theme of your development wordpress site, and you may now begin development.
+NOTE from Parker (11/6/2020): I was not very familiar with wordpress when I created this site, but we needed it really fast so I threw it together as quick as possible. A better way to set up this project would be to use Docker to set up a wordpress server that can be run on anybody's computer (including a server for production environment). Sorry for the difficult development workflow!
+
+#### To deploy to the live website:
+1. Push changes to the master branch of this repository
+2. SSH into the Lightsail Instance (this can be done with any ssh client, but aws offers a browser-based one that works great)
+3. navigate to the `/home/bitnami/apps/wordpress/htdocs/wp-content/themes/arrived-partners-wordpress-theme` directory
+4. enter command:
 ```
 $ git pull
 ```
