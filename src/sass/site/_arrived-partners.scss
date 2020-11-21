@@ -3,14 +3,25 @@
 
 //TODO: organize these css classes a little better.
 
-// html {
-//     @media screen and (max-width: $break__small) {
-//         font-size: 3vw;
-//     }
-// }
+.bold {
+    font-weight: 500;
+}
+
+.tagline-text {
+    font-size: 24px;
+
+    @media screen and (max-width: $break__medium) {
+        font-size: 3vw;
+    }
+
+    @media screen and (max-width: $break__small) {
+        font-size: 12px;
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 32px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .site-title {
